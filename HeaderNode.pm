@@ -39,12 +39,12 @@ sub to_string {
             push( @string, " " x $indent_length . $delim . $dep->{"filepath"} );
 
             #$_to_string->( $dep, length( $string[-1] ) );
-            $_to_string->( $dep, $indent_length + 2 );
+            $_to_string->( $dep, $indent_length + 4 );
         }
     };
 
     #&$_to_string( $self, length( $string[-1] ) );
-    &$_to_string( $self, 2 );
+    &$_to_string( $self, 4 );
     return join( "\n", @string );
 }
 
